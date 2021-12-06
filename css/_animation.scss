@@ -1,0 +1,56 @@
+.blur-out {
+  animation: blur-out 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@keyframes blur-out {
+  0% {
+    filter: blur(100px);
+  }
+  100% {
+    filter: blur(0);
+  }
+}
+
+@keyframes pulse-play {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 81, 15, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 30px rgba(255, 81, 15, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 81, 15, 0);
+  }
+}
+
+.offer__title,
+.offer__untitle,
+.offer__items,
+.offer__phone,
+.benefit__title,
+.benefit__text,
+.familiar__title,
+.familiar__text,
+.familiar__box,
+.solution__title,
+.solution__text,
+.solution__visual,
+.solution-box,
+.solution__partners,
+.calculate__title,
+.calculate__content,
+.applicable__title,
+.applicable__box,
+.bonuses__title,
+.bonuses-box,
+.cases__title,
+.cases__content,
+.system__title,
+.system-box,
+.service-features__title,
+.service-features__content,
+.service-features__partners,
+.how-it-works__title,
+.how-it-works__block {
+  opacity: 0;
+}

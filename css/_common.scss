@@ -1,0 +1,91 @@
+.bg {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  z-index: -1;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../assets/Noise.png) center / cover no-repeat;
+    z-index: 2;
+  }
+
+  > .circle-1 {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    left: 58%;
+    top: 15%;
+    background: #3e96fc;
+    filter: blur(800px);
+  }
+
+  > .circle-2 {
+    position: absolute;
+    width: 188px;
+    height: 376px;
+    left: 0;
+    top: 8%;
+    background: #ff8e02;
+    mix-blend-mode: normal;
+    filter: blur(750px);
+  }
+
+  > .circle-3 {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    left: 95%;
+    top: 15%;
+    background: #ff3f02;
+    filter: blur(900px);
+  }
+
+  > .circle-4 {
+    position: absolute;
+    left: 39.17%;
+    right: 51.35%;
+    top: 42.59%;
+    bottom: 40.56%;
+    background: #ff8e02;
+    filter: blur(600px);
+  }
+
+  > .circle-5 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 18%;
+    top: 94%;
+    background: #ff3f02;
+    filter: blur(900px);
+  }
+
+  > .circle-6 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 90%;
+    top: 82%;
+    background: #ff3f02;
+    filter: blur(900px);
+  }
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  display: none;
+}
+
+// @media screen and (min-width: 1460px) {}
+
+// @media screen and (min-width: 1024px) and (max-width: 1459px) {}

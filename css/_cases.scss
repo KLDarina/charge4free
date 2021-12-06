@@ -1,0 +1,314 @@
+.cases {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 80px 16px;
+  width: 100vw;
+  @media screen and (min-width: 1650px) {
+    padding: 200px $side-padding;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1649px) {
+    padding: 114px 0 200px;
+  }
+  &__content {
+    margin-top: 32px;
+    width: 100%;
+    position: relative;
+    @media screen and (min-width: 1024px) {
+      margin-top: 80px;
+    }
+    &:before {
+      content: "";
+      width: 420px;
+      height: 100%;
+      background: #f5f8fd;
+      filter: blur(100px);
+      position: absolute;
+      bottom: 0;
+      left: calc(-420px / 2);
+      z-index: 5;
+      border-radius: 70%;
+      opacity: 0;
+      visibility: hidden;
+      @media screen and (min-width: 1024px) and (max-width: 1649px) {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &::after {
+      content: "";
+      width: 420px;
+      height: 100%;
+      background: #f5f8fd;
+      filter: blur(100px);
+      position: absolute;
+      bottom: 0;
+      right: calc(-420px / 2);
+      z-index: 5;
+      border-radius: 70%;
+      opacity: 0;
+      visibility: hidden;
+      @media screen and (min-width: 1024px) and (max-width: 1649px) {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    > svg {
+      cursor: pointer;
+      position: absolute;
+      @media screen and (min-width: 1650px) {
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      @media screen and (min-width: 1024px) and (max-width: 1649px) {
+        top: initial;
+        bottom: -100px;
+      }
+      > g {
+        > rect {
+          transition: $main-transition;
+        }
+        > path {
+          transition: $main-transition;
+        }
+      }
+      &.left-arrow {
+        left: -100px;
+        @media screen and (min-width: 1024px) and (max-width: 1649px) {
+          left: 92px;
+        }
+      }
+      &.right-arrow {
+        right: -100px;
+        @media screen and (min-width: 1024px) and (max-width: 1649px) {
+          right: 92px;
+        }
+      }
+      &:hover {
+        > g {
+          > rect {
+            &:first-child {
+              fill: #3e96fccc;
+            }
+            &:last-child {
+              stroke: #3e96fccc;
+            }
+          }
+          > path {
+            fill: #ffffffcc;
+          }
+        }
+      }
+    }
+  }
+  &__slider {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    > .slick-dots {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      bottom: -50px;
+      padding-inline-start: 0;
+      @media screen and (min-width: 1024px) {
+        bottom: -100px;
+      }
+      > li {
+        display: inline-block;
+        position: relative;
+        &.slick-active {
+          &:before {
+            width: 16px;
+            height: 16px;
+            opacity: 1;
+          }
+        }
+        &:before {
+          content: "";
+          width: 12px;
+          height: 12px;
+          background: #3e96fc;
+          opacity: 0.35;
+          backdrop-filter: blur(4px);
+          border-radius: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        > button {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+.cases-item {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 1460px) {
+    margin-right: 24px;
+  }
+  @media screen and (max-width: 1459px) and (min-width: 1024px) {
+    margin-right: 16px;
+  }
+  &__visual {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 40px rgba(29, 69, 115, 0.05);
+    border-radius: 24px;
+    margin-bottom: 24px;
+    @media screen and (min-width: 1460px) {
+      height: 264px;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1459px) {
+      height: 235px;
+    }
+    > img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__title {
+    font-family: $main-font-family;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    color: $title-color;
+    @media screen and (min-width: 1460px) {
+      font-size: 28px;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1459px) {
+      font-size: 24px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding-inline-start: 0;
+    > li {
+      font-family: $main-font-family;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 21px;
+      display: flex;
+      align-items: center;
+      color: #383749;
+      margin-top: 8px;
+      position: relative;
+      padding-left: 32px;
+      @media screen and (min-width: 1460px) {
+        font-size: 20px;
+        line-height: 30px;
+      }
+      @media screen and (min-width: 1024px) and (max-width: 1459px) {
+        font-size: 18px;
+        line-height: 27px;
+      }
+      &:before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background: linear-gradient(
+            104.25deg,
+            rgba(255, 208, 87, 0.2) 0%,
+            rgba(255, 142, 2, 0.2) 100%
+          ),
+          linear-gradient(
+            0deg,
+            rgba(241, 241, 241, 0.1),
+            rgba(241, 241, 241, 0.1)
+          );
+        box-shadow: inset 0px 0.5px 2px rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(3px);
+        border-radius: 50%;
+        position: absolute;
+        left: 4px;
+        top: 4px;
+        z-index: 2;
+      }
+      &:after {
+        content: "";
+        background: #ff8e02;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        left: 11px;
+        top: 3px;
+        z-index: 1;
+      }
+    }
+  }
+  &__savings {
+    margin-bottom: 16px;
+    padding: 6px 24px;
+    background: linear-gradient(
+        0deg,
+        rgba(19, 214, 120, 0.5),
+        rgba(19, 214, 120, 0.5)
+      ),
+      rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0px 0.5px 2px rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    @media screen and (min-width: 1460px) {
+      padding: 6px 24px;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1459px) {
+      padding: 6px 16px;
+    }
+    > span {
+      font-family: $main-font-family;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 160%;
+      color: #ffffff;
+      @media screen and (min-width: 1460px) {
+        font-size: 24px;
+      }
+      @media screen and (min-width: 1024px) and (max-width: 1459px) {
+        font-size: 20px;
+      }
+    }
+    > div {
+      font-family: $main-font-family;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 160%;
+      color: #ffffff;
+    }
+  }
+  &__description {
+    padding: 16px 24px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(16px);
+    border-radius: 16px;
+    font-family: $main-font-family;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    color: $text-color;
+    @media screen and (min-width: 1460px) {
+      font-size: 20px;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1459px) {
+      font-size: 18px;
+    }
+  }
+}

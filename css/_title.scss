@@ -1,0 +1,49 @@
+.text {
+  font-family: $main-font-family;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  color: $text-color;
+  @media screen and (min-width: 1650px) {
+    font-size: 20px;
+    line-height: 160%;
+  }
+  @media screen and (max-width: 1649px) and (min-width: 1024px) {
+    font-size: 18px;
+    line-height: 160%;
+  }
+}
+
+.title-h1 {
+  display: inline-block;
+  font-family: $main-font-family;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 115%;
+  color: $title-color;
+  @media screen and (min-width: 1650px) {
+    font-size: 80px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1649px) {
+    font-size: 48px;
+  }
+}
+
+.title-h2 {
+  display: inline-block;
+  font-family: $main-font-family;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 115%;
+  color: $title-color;
+  text-align: center;
+  @media screen and (min-width: 1650px) {
+    font-size: 58px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1649px) {
+    font-size: 48px;
+  }
+}

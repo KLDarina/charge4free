@@ -1,0 +1,286 @@
+// @include parallax-init;
+.familiar {
+  width: 100vw;
+  padding: 80px 16px 0;
+  display: block;
+
+  @media screen and (min-width: 1650px) {
+    padding: 165px 0 0 $side-padding;
+  }
+
+  @media screen and (max-width: 1649px) and (min-width: 1024px) {
+    padding: 93px 0 0 92px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: table;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 1024px) {
+      display: table-row;
+    }
+  }
+
+  &__text {
+    font-family: $main-font-family;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 160%;
+    color: $text-color;
+
+    @media screen and (min-width: 1460px) {
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 1459px) and (min-width: 1024px) {
+      font-size: 20px;
+    }
+
+    > br {
+      display: none;
+
+      @media screen and (min-width: 1024px) {
+        display: block;
+      }
+    }
+
+    > span {
+      display: inline-block;
+      padding: 0 20px 0 9px;
+      font-style: normal;
+      font-weight: bold;
+
+      font-size: 20px;
+      line-height: 160%;
+      color: #ffffff;
+      background: linear-gradient(
+          0deg,
+          rgba(255, 63, 2, 0.5),
+          rgba(255, 63, 2, 0.5)
+        ),
+        rgba(255, 255, 255, 0.3);
+      box-shadow: inset 0px 0.5px 2px rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(8px);
+      border-radius: 16px;
+      position: relative;
+
+      @media screen and (min-width: 1460px) {
+        padding: 0 32px 0 12px;
+        font-size: 36px;
+      }
+
+      @media screen and (max-width: 1459px) and (min-width: 1024px) {
+        padding: 0 17px 0 8px;
+        font-size: 28px;
+      }
+
+      &:before {
+        content: "";
+        width: 6px;
+        height: 18px;
+        background: url(../assets/arrow.svg) center / contain no-repeat;
+        position: absolute;
+        right: 10px;
+        top: 7px;
+
+        @media screen and (min-width: 1460px) {
+          width: 12px;
+          height: 36px;
+          right: 12px;
+          top: 12px;
+        }
+
+        @media screen and (max-width: 1459px) and (min-width: 1024px) {
+          width: 9px;
+          height: 26px;
+          right: 8px;
+          top: 10px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: table-cell;
+
+    @media screen and (min-width: 1650px) {
+      width: 700px;
+    }
+
+    @media screen and (max-width: 1649px) and (min-width: 1024px) {
+      width: 560px;
+    }
+  }
+
+  &__visual {
+    width: 100%;
+    display: block;
+    height: 400px;
+    position: relative;
+    margin-top: 40px;
+
+    @media screen and (min-width: 1024px) {
+      display: table-cell;
+      height: initial;
+      margin-top: 0;
+    }
+
+    @media screen and (min-width: 1650px) {
+      width: calc(100% - 700px);
+    }
+
+    @media screen and (max-width: 1649px) and (min-width: 1024px) {
+      width: calc(100% - 560px);
+    }
+
+    img {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @media screen and (min-width: 1024px) {
+        right: 0;
+        left: initial;
+      }
+
+      &.terminal {
+        z-index: 2;
+      }
+
+      &.red-card,
+      &.orange-card,
+      &.phone {
+        z-index: 3;
+        // @include parallax(-0.3);
+      }
+
+      &.blue-card {
+        z-index: 1;
+        // @include parallax(-0.15);
+      }
+    }
+  }
+
+  &__box {
+    width: 100%;
+    background: #ffffff;
+    border: 4px solid $familiar-color;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 40px rgba(140, 78, 0, 0.05);
+    border-radius: 24px;
+    margin-top: 43px;
+    padding: 32px 14px 16px;
+    position: relative;
+
+    @media screen and (min-width: 1460px) {
+      margin-top: 120px;
+      padding: 40px;
+      border-radius: 50px;
+    }
+
+    @media screen and (max-width: 1449px) and (min-width: 1024px) {
+      padding: 24px;
+      margin-top: 60px;
+      border-radius: 44px;
+    }
+  }
+
+  &__label {
+    font-family: $main-font-family;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $title-color;
+    padding: 8px 24px;
+    background: #ffffff;
+    border: 4px solid #ff8e02;
+    border-radius: 16px;
+    width: fit-content;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    @media screen and (min-width: 1460px) {
+      padding: 16px 52px;
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 1459px) and (min-width: 1024px) {
+      font-size: 18px;
+      padding: 10px 24px;
+    }
+  }
+
+  &__sale {
+    font-family: $main-font-family;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 39px;
+    color: $familiar-color;
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+
+    @media screen and (min-width: 1460px) {
+      font-size: 48px;
+      line-height: 160%;
+    }
+
+    @media screen and (min-width: 1020px) and (max-width: 1459px) {
+      font-size: 36px;
+      line-height: 160%;
+    }
+
+    > span {
+      font-family: $main-font-family;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 100%;
+      color: $title-color;
+      display: inline-block;
+      margin-left: 8px;
+
+      @media screen and (min-width: 1460px) {
+        font-size: 18px;
+        line-height: 160%;
+        margin-left: 24px;
+      }
+
+      @media screen and (min-width: 1020px) and (max-width: 1459px) {
+        font-size: 16px;
+        line-height: 160%;
+      }
+    }
+  }
+
+  &__description {
+    font-family: $main-font-family;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 140%;
+    color: $text-color;
+
+    @media screen and (min-width: 1460px) {
+      font-size: 18px;
+      line-height: 160%;
+    }
+
+    @media screen and (min-width: 1020px) and (max-width: 1459px) {
+      font-size: 16px;
+      line-height: 160%;
+    }
+  }
+}

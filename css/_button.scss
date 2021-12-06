@@ -1,0 +1,75 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $main-font-family;
+  font-style: normal;
+  font-weight: 600;
+  cursor: pointer;
+
+  &--border {
+    padding: 13px 32px 11px;
+    border: 2px solid $button-main-color;
+    filter: drop-shadow(0px 0px 16px rgba(62, 150, 252, 0.1));
+    border-radius: 12px;
+    color: $button-main-color;
+    transition: $main-transition;
+    &:hover {
+      background: #50a1ff;
+      box-shadow: 0px 4px 16px rgba(80, 161, 255, 0.2);
+      color: #ffffff;
+    }
+
+    @media screen and (min-width: 1460px) {
+      padding: 13px 32px 11px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1459px) {
+      padding: 8px 24px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  &--small-fill {
+    background: #3e96fc;
+    border-radius: 10px;
+    padding: 11px 24px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    transition: $main-transition;
+    &:hover {
+      background: #50a1ff;
+      box-shadow: 0px 4px 16px rgba(80, 161, 255, 0.2);
+    }
+  }
+
+  &--big-fill {
+    background: #3e96fc;
+    border-radius: 10px;
+    padding: 6px 16px;
+    font-size: 14px;
+    line-height: 21px;
+    color: #ffffff;
+    transition: $main-transition;
+    &:hover {
+      background: #50a1ff;
+      box-shadow: 0px 4px 16px rgba(80, 161, 255, 0.2);
+    }
+
+    @media screen and (min-width: 1650px) {
+      font-size: 18px;
+      line-height: 27px;
+      padding: 16px 38px;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1649px) {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 9px 24px;
+    }
+  }
+}

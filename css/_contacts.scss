@@ -1,0 +1,135 @@
+.contacts {
+  padding: 80px 16px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  @media screen and (min-width: 1460px) {
+    padding: 170px 372px 0;
+  }
+  @media screen and (max-width: 1459px) and (min-width: 1024px) {
+    padding: 160px 40px 0;
+  }
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 1024px) {
+      padding: 83px 10px;
+      background: url(../assets/Contact.png) center / contain no-repeat;
+    }
+  }
+  &__title {
+    font-family: $main-font-family;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: $title-color;
+    margin-bottom: 32px;
+    @media screen and (min-width: 1024px) {
+      font-size: 28px;
+    }
+  }
+}
+
+.form {
+  background: #ffffff;
+  border: 2px solid rgba(62, 150, 252, 0.1);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 40px rgba(29, 69, 115, 0.05);
+  border-radius: 24px;
+  padding: 24px 16px;
+  max-width: 504px;
+  width: 100%;
+  @media screen and (min-width: 1024px) {
+    padding: 40px;
+    border-radius: 50px;
+  }
+  > button {
+    width: 100%;
+    background: #3e96fc;
+    border-radius: 10px;
+    padding: 16px;
+    border: none;
+    font-family: $main-font-family;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    transition: $main-transition;
+    &:hover {
+      background: #50a1ff;
+      box-shadow: 0px 4px 16px rgba(80, 161, 255, 0.2);
+    }
+    @media screen and (min-width: 1024px) {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+  > input {
+    width: 100%;
+    margin-bottom: 24px;
+    background: #ffffff;
+    border: 1px solid rgba(62, 150, 252, 0.1);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 14px rgba(62, 150, 252, 0.06);
+    border-radius: 12px;
+    font-family: $main-font-family;
+    font-style: normal;
+    font-weight: 500;
+    color: $title-color;
+    padding: 11px 12px;
+    font-size: 14px;
+    line-height: 21px;
+    transition: $main-transition;
+    &:hover {
+      box-shadow: 0px 4px 16px rgba(62, 150, 252, 0.1);
+      border: 1px solid #3e97fc83;
+    }
+    &:focus {
+      border: 1px solid #3e96fc;
+      box-shadow: 0px 4px 16px rgba(62, 150, 252, 0.1);
+    }
+    @media screen and (min-width: 1460px) {
+      padding: 16px 24px;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1459px) {
+      padding: 12px 16px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      font-family: $main-font-family;
+      font-style: normal;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      color: $text-color;
+      opacity: 0.4;
+      font-size: 14px;
+      line-height: 21px;
+
+      @media screen and (min-width: 1460px) {
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      @media screen and (min-width: 1024px) and (max-width: 1459px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
